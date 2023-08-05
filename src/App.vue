@@ -13,7 +13,7 @@
 		interface Window { CESIUM_BASE_URL: string; }
 	}
 
-	window.CESIUM_BASE_URL = 'public/static/cesium';
+	window.CESIUM_BASE_URL = 'static/cesium';
 	
 
 	export default defineComponent({
