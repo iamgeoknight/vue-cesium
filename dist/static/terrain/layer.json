@@ -1,0 +1,31 @@
+{
+  "tilejson": "2.1.0",
+  "name": "dem",
+  "description": "",
+  "version": "1.1.0",
+  "format": "quantized-mesh-1.0",
+  "attribution": "",
+  "schema": "tms",
+  "extensions": [ "octvertexnormals" ],
+  "tiles": [ "{z}/{x}/{y}.terrain?v={version}" ],
+  "projection": "EPSG:4326",
+  "bounds": [ 0.00, -90.00, 180.00, 90.00 ],
+  "available": [
+    [ { "startX": 0, "startY": 0, "endX": 1, "endY": 0 } ]
+   ,[ { "startX": 2, "startY": 1, "endX": 2, "endY": 1 } ]
+   ,[ { "startX": 5, "startY": 2, "endX": 5, "endY": 2 } ]
+   ,[ { "startX": 11, "startY": 5, "endX": 11, "endY": 5 } ]
+   ,[ { "startX": 22, "startY": 10, "endX": 22, "endY": 10 } ]
+   ,[ { "startX": 45, "startY": 21, "endX": 45, "endY": 21 } ]
+   ,[ { "startX": 91, "startY": 43, "endX": 91, "endY": 43 } ]
+   ,[ { "startX": 182, "startY": 86, "endX": 182, "endY": 86 } ]
+   ,[ { "startX": 364, "startY": 172, "endX": 365, "endY": 173 } ]
+   ,[ { "startX": 728, "startY": 345, "endX": 731, "endY": 347 } ]
+   ,[ { "startX": 1457, "startY": 690, "endX": 1462, "endY": 694 } ]
+   ,[ { "startX": 2914, "startY": 1381, "endX": 2924, "endY": 1388 } ]
+   ,[ { "startX": 5829, "startY": 2762, "endX": 5849, "endY": 2776 } ]
+   ,[ { "startX": 11658, "startY": 5524, "endX": 11698, "endY": 5553 } ]
+   ,[ { "startX": 23317, "startY": 11048, "endX": 23397, "endY": 11107 } ]
+   ,[ { "startX": 46634, "startY": 22096, "endX": 46794, "endY": 22215 } ]
+  ]
+}

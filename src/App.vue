@@ -4,7 +4,7 @@
 
 <script lang="ts">
 	import { defineComponent } from 'vue'
-	import { Viewer, Ion, OpenStreetMapImageryProvider, ImageryLayer } from "cesium";
+	import { Viewer, Ion, OpenStreetMapImageryProvider, ImageryLayer, CesiumTerrainProvider } from "cesium";
 	import "cesium/Build/Cesium/Widgets/widgets.css";
 
 	Ion.defaultAccessToken = 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJqdGkiOiJkM2I3YTNiNy0wNjNiLTRmNDEtODFiMy05ODAzOGQ2ZTM0YjkiLCJpZCI6NzExNywiaWF0IjoxNjkwOTIzNDQzfQ.hI_Ri0N2Y3bWNzp7ckE4ho6nr4ZQMDMxFrluGgHSdy4';
@@ -18,15 +18,19 @@
 
 	export default defineComponent({
 		name: 'App',	
-		mounted() {
+		async mounted() {
 			let baseLayer = new ImageryLayer(new OpenStreetMapImageryProvider({
 				url: "https://tile.openstreetmap.org/"
 			}), {})
 
-			new Viewer("cesiumContainer", {
+			let viewer = new Viewer("cesiumContainer", {
 				baseLayer: baseLayer
-			});
+      });
 
+      var terrainProvider = await CesiumTerrainProvider.fromUrl('static/terrain', {});
+      
+			viewer.terrainProvider = terrainProvider;
+			viewer.scene.globe.terrainExaggeration = 2;
 			
 		}
 	})
